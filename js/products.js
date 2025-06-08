@@ -166,7 +166,7 @@ window.products = [
 },
 {
     id: "Jim Dandy",
-    name: "Limited Edition Jim Dandy™ Parlor Solid Top",
+    name: "Limited Edition Jim Dandy™ Parlor Solid",
     oldPrice: "300.00$",
     price: "270.00$",
     variants: [

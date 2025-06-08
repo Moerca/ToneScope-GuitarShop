@@ -1,9 +1,31 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // CATEGORY MAPPING: Button label to filter function
+// ==============================
+// ToneScope Main Script
+// ==============================
+
+// --- Topbar Floating & Close Functionality ---
+
+document.addEventListener("DOMContentLoaded", function() {
+  const topbar = document.getElementById('top-bar');
+  const closeTopbarBtn = document.getElementById('close-topbar');
+  const header = document.getElementById('header');
+
+  if (closeTopbarBtn && topbar && header) {
+    closeTopbarBtn.addEventListener('click', function () {
+      topbar.style.display = 'none';
+      header.classList.remove('pt-16', 'pt-12', 'pt-10', 'pt-8', 'pt-6', 'pt-4');
+      header.classList.add('pt-2'); 
+      header.style.paddingTop = "-2000px";
+    });
+  }
+});
+
+  // --- Product Category Navigation ---
+
+  // Define product categories and their filter logic
   const categories = [
     {
       label: "Best Sellers",
-      filter: (product) => true, // Show all, or implement your own bestseller logic
+      filter: (product) => true, // Show all products or implement custom bestseller logic
     },
     {
       label: "Taylor Line",
@@ -23,57 +45,38 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   ];
 
-  // Buttons
+  // Get navigation and category buttons
   const nav = document.querySelector("nav.flex");
-  const buttons = Array.from(nav.querySelectorAll("button"));
+  const buttons = nav ? Array.from(nav.querySelectorAll("button")) : [];
 
-  // Main heading (updates on filter switch)
+  // Get main headline (updates on filter switch)
   const headline = document.querySelector("section h2");
 
-  // Product render function (calls your render code)
+  // Render product cards (call external render function)
   function renderProducts(filteredProducts) {
-    // Render logic is in product-hover.js, so just set window.products and call the render function again
     window.filteredProducts = filteredProducts;
     if (window.renderProductGrid) {
       window.renderProductGrid();
     }
   }
 
-  // Activate button style
+  // Set active button style
   function setActiveButton(idx) {
     buttons.forEach((btn, i) => {
       if (i === idx) {
-        btn.classList.add(
-          "bg-gray-900",
-          "text-white",
-          "font-semibold",
-          "shadow-sm"
-        );
-        btn.classList.remove(
-          "bg-white",
-          "text-gray-700",
-          "hover:bg-gray-100"
-        );
+        btn.classList.add("bg-gray-900", "text-white", "font-semibold", "shadow-sm");
+        btn.classList.remove("bg-white", "text-gray-700", "hover:bg-gray-100");
         btn.setAttribute("aria-pressed", "true");
         btn.focus();
       } else {
-        btn.classList.remove(
-          "bg-gray-900",
-          "text-white",
-          "font-semibold",
-          "shadow-sm"
-        );
-        btn.classList.add(
-          "bg-white",
-          "text-gray-700",
-          "hover:bg-gray-100"
-        );
+        btn.classList.remove("bg-gray-900", "text-white", "font-semibold", "shadow-sm");
+        btn.classList.add("bg-white", "text-gray-700", "hover:bg-gray-100");
         btn.setAttribute("aria-pressed", "false");
       }
     });
   }
 
-  // Filter handler
+  // Handle category filter selection
   function handleFilter(idx) {
     setActiveButton(idx);
     const cat = categories[idx];
@@ -82,45 +85,45 @@ document.addEventListener("DOMContentLoaded", function () {
     renderProducts(filtered);
   }
 
-  // Attach events, initial focus
+  // Attach click events to category buttons
   buttons.forEach((btn, idx) => {
     btn.addEventListener("click", () => handleFilter(idx));
   });
 
-  // Focus and show best sellers by default
+  // Default: show best sellers and set focus
   handleFilter(0);
 
-  // Optionally: Keyboard navigation (left/right)
-  nav.addEventListener("keydown", (e) => {
-    const activeIdx = buttons.findIndex((b) => b.getAttribute("aria-pressed") === "true");
-    if (e.key === "ArrowRight") {
-      e.preventDefault();
-      const next = (activeIdx + 1) % buttons.length;
-      buttons[next].focus();
-      handleFilter(next);
-    }
-    if (e.key === "ArrowLeft") {
-      e.preventDefault();
-      const prev = (activeIdx - 1 + buttons.length) % buttons.length;
-      buttons[prev].focus();
-      handleFilter(prev);
-    }
-  });
-});
+  // Keyboard navigation for the category bar (left/right arrows)
+  if (nav) {
+    nav.addEventListener("keydown", (e) => {
+      const activeIdx = buttons.findIndex((b) => b.getAttribute("aria-pressed") === "true");
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        const next = (activeIdx + 1) % buttons.length;
+        buttons[next].focus();
+        handleFilter(next);
+      }
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        const prev = (activeIdx - 1 + buttons.length) % buttons.length;
+        buttons[prev].focus();
+        handleFilter(prev);
+      }
+    });
+  }
 
-// Product grid rendering override (for filtering)
-window.renderProductGrid = function () {
-  const grid = document.getElementById('productGrid');
-  const products = window.filteredProducts || window.products;
-  grid.innerHTML = '';
-  // Use your rendering logic from product-hover.js, but use 'products' instead of 'window.products'
-  products.forEach(product => {
-    // --- COPY THE CARD RENDER CODE FROM product-hover.js HERE ---
-    // To avoid duplication, you could move your product card rendering into a function and call it here.
-    // For simplicity, just use the rendering logic as you already have, replacing window.products with products.
-    // Example:
-    if (window.renderProductCard) {
-      grid.appendChild(window.renderProductCard(product));
-    }
-  });
-};
+  // --- Product Grid Rendering Override (for Filtering) ---
+
+  // This function is called after category filtering to render visible products.
+  window.renderProductGrid = function () {
+    const grid = document.getElementById('productGrid');
+    const products = window.filteredProducts || window.products;
+    grid.innerHTML = '';
+    // Use your own card rendering logic (e.g. imported from product-hover.js)
+    products.forEach(product => {
+      if (window.renderProductCard) {
+        grid.appendChild(window.renderProductCard(product));
+      }
+    });
+  };
+

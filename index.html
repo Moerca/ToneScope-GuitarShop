@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Choose your dream Guitar!</title>
+</head>
+<body>
+<!-- Top Bar -->
+     <div id="top-bar" class ="bg-gray-100 fixed top-0 right-0 left-0 py-2">
+        <p class="text-center py-2 font-semibold">
+            UP TO 20% OFF - Dont miss out on our latest deals!
+        </p>
+     </div>
+
+     <!-- Hearder -->
+    <header class="flex justify-between items-center px-10 py-6 mt-16">
+        <img src="./images/logo.png" alt="Tesla" width="120" height="24">
+        <!-- Language Button --> 
+        <button>
+            <i class="fa-solid fa-globe"></i> <span class="font-bold">US</span>
+        </button>
+    </header>
+
+
+<!-- Body -->   
+    <main class="flex flex-col md:flex-row justify-between px-4 md:px-10 py-6">
+    <!-- Image Selection -->
+        <selection class="with-flull md:w-3/4">
+            <div class="sticky top-24">
+                <!-- Guitar Img 1-->
+                 <div class="h-96 bg-gray-200 flex items-center justify-center overflow-hidden mb-4">
+                    <img 
+                    src="./images/fender_black.png" 
+                    alt="fender black" 
+                    class="max-w-full h-auto transform"
+                    id="fenderFront-image"
+                    />
+                 </div>
+
+                 <!-- Guitar Img 2 -->
+                  <div class="h-96 bg-gray-200 flex items-center justify-center overflow-hidden mb-4">
+                    <img 
+                    src="./images/fender_black_back.png" 
+                    alt="fender black" 
+                    class="max-w-full h-auto transform"
+                    id="fenderBack-image"
+                    />
+                  </div>
+            </div>
+        </selection>
+
+    <!-- Sidebar -->
+    <aside class="w-full md:w-1/3 pl-0 md:pl-8 mt-6 md:mt-0 z-2">
+        <h1 class="text-3xl text-center font-bold mb-5">American Performer Stratocaster® HSS</h1>
+        <h2 class="text-xl text-center-font-light">Costomize Your Guitar</h2>
+    
+    <!-- Color Buttons -->
+    <div class="my-8" id="color-buttons">
+        <h3 class="font-semibold mb-2">
+        Color: <span id="color-label">Aubergine</span>
+        </h3>
+    <div class="color-row">
+    <!-- Sunburst -->
+        <button class="color-btn color-btn--active" data-color="3 Color Sunburst">
+        <img 
+        src="./images/colors/3-color-sunburst.png" 
+        alt="3 Color Sunburst" 
+        class="color-img"
+        />
+    </button>
+    <!-- Black -->
+    <button class="color-btn" data-color="Black">
+        <img 
+        src="./images/colors/black.png" 
+        alt="Black" 
+        class="color-img"
+        />
+    </button>
+    <!-- Aubergine -->
+    <button class="color-btn" data-color="Fen Aubergine">
+        <img 
+        src="./images/colors/fen_aubergine.png" 
+        alt="Fen Aubergine" 
+        class="color-img"
+        />
+    </button>
+    <!-- Green -->
+    <button class="color-btn" data-color="Sea Foam Green">
+        <img 
+        src="./images/colors/sea-foam-green.png" 
+        alt="Sea Foam Green" 
+        class="color-img"
+        />
+    </button>
+  </div>
+</div>
+
+<!-- Fingerboard Material -->
+ <div class="my-8" id="fingerboard-section">
+        <h3 class="font-semibold mb-2">
+        Fingerboard Material: <span id="fingerboard-label">Rosewood</span>
+        </h3>
+    <div class="color-row" id="fingerboard-btn">
+    <!-- Rosewood -->
+    <button class="color-btn fingerboard-btn" data-fingerboard="Rosewood">
+        <img 
+        src="./images/colors/rosewood.png" 
+        alt="Rosewood" 
+        class="color-img"
+        />
+    </button>
+    <!-- Maple -->
+    <button class="color-btn fingerboard-btn" data-fingerboard="Maple">
+        <img 
+        src="./images/colors/maple.png" 
+        alt="Maple" 
+        class="color-img"
+        />
+    </button>
+    </div>
+</div>
+
+<!-- Body Material -->
+ <div class="my-8" id="body-section">
+        <h3 class="font-semibold mb-2">
+        Body Material: <span id="body-label">Alder</span>
+        </h3>
+    <div class="color-row" id="body-btn">
+    <!-- Adler -->
+    <button class="color-btn body-btn color-btn--active" data-body="Adler">
+        <img 
+        src="./images/colors/adler.png" 
+        alt="Adler" 
+        class="color-img"
+        />
+    </button>
+    </div>
+</div>
+
+</aside>
+    </main>
+       <script src="./js/main.js"></script>
+</body>
+</html>

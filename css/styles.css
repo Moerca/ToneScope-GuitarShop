@@ -19,7 +19,7 @@
   box-sizing: border-box;
   cursor: pointer;
   outline: none;
-  transition: border-color 0.15s, transform 0.15s;
+  transition: border-color 0.15s, transform 0.3s;
 }
 
 .color-btn:hover {
@@ -29,9 +29,14 @@
 .color-btn:focus {
   border-color: #333;
 }
-.color-btn--active {
+.btn-selected {
   border-color: #222;
 }
+
+
+
+
+
 .color-img {
   width: 28px;
   height: 28px;

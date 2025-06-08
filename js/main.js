@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   colorButtons.forEach(btn => {
     btn.addEventListener('click', function () {
-      colorButtons.forEach(b => b.classList.remove('color-btn--active'));
-      this.classList.add('color-btn--active');
+      colorButtons.forEach(b => b.classList.remove('btn-selected'));
+      this.classList.add('btn-selected');
 
       const selectedColor = this.getAttribute('data-color');
       colorLabel.textContent = selectedColor;
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Initial auf active Selection
-  const activeBtn = document.querySelector('.color-btn--active[data-color]');
+  const activeBtn = document.querySelector('.btn-selected[data-color]');
   if (activeBtn) {
     updateFingerboardButtons(activeBtn.getAttribute('data-color'));
   }

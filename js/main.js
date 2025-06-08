@@ -54,4 +54,5 @@ document.addEventListener('DOMContentLoaded', () => {
   if (activeBtn) {
     updateFingerboardButtons(activeBtn.getAttribute('data-color'));
   }
+
 });

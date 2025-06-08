@@ -33,14 +33,17 @@
   border-color: #222;
 }
 
-
-
-
-
 .color-img {
   width: 28px;
   height: 28px;
   border-radius: 50%;
   object-fit: cover;
+  display: block;
+}
+
+.product-image {
+  max-height: 85%;
+  max-width: 90%;
+  margin: auto;
   display: block;
 }

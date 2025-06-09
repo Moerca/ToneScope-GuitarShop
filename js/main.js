@@ -113,8 +113,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // --- Product Grid Rendering Override (for Filtering) ---
-
-  // This function is called after category filtering to render visible products.
   window.renderProductGrid = function () {
     const grid = document.getElementById('productGrid');
     const products = window.filteredProducts || window.products;

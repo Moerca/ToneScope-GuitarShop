@@ -3,8 +3,27 @@ window.products = [
   {
     id: "Stratocaster-HHS",
     name: "American Performer Stratocaster® HSS",
+    model: "0114920300",
     oldPrice: "1,092.00$",
     price: "998.00$",
+    details: [
+      "Upgraded 2-Point Tremolo with Cold-Rolled Steel Block",
+      "Deep “C” neck; rolled fingerboard edges",
+      "V-Mod II single-coil pickups"
+    ],
+    moreDetails: [
+    {
+      title: "More Specifications",
+      content: [
+        "Alder body",
+        "Deluxe molded case included"
+      ]
+    },
+    {
+      title: "Warranty & Support",
+      content: "Limited lifetime warranty"
+    }
+  ],
     variants: [
         {
         color: "3-color-sunburst",
@@ -12,7 +31,15 @@ window.products = [
         imgMain: "./images/fender/APS_og_front.png",
         imgHover: "./images/fender/APS_og_back.png",
         rotateMain: "rotate-[-90deg]",
-        rotateHover: "rotate-[90deg]"
+        rotateHover: "rotate-[90deg]",
+        bodyMaterial: "Adler",
+        fingerboardMaterial: "Rosewood",
+        detailImages: [
+          "./images/fender/APS_og_body.png",
+          "./images/fender/APS_og_body2.png",
+          "./images/fender/APS_og_headstock_front.png",
+          "./images/fender/APS_og_headstock_back.png",
+        ],
       },
       {
         color: "Black",
@@ -20,7 +47,15 @@ window.products = [
         imgMain: "./images/fender/APS_black_front.png",
         imgHover: "./images/fender/APS_black_back.png",
         rotateMain: "rotate-[-90deg]",
-        rotateHover: "rotate-[90deg]"
+        rotateHover: "rotate-[90deg]",
+        bodyMaterial: "Adler",
+        fingerboardMaterial: "Maple",
+        detailImages: [
+          "./images/fender/APS_black_body1.png",
+          "./images/fender/APS_black_body2.png",
+          "./images/fender/APS_black_headstock_front.png",
+          "./images/fender/APS_black_headstock_back.png",
+        ],
       },
       {
         color: "Aubergine",
@@ -28,7 +63,15 @@ window.products = [
         imgMain: "./images/fender/APS_aubergine_front.png",
         imgHover: "./images/fender/APS_aubergine_back.png",
         rotateMain: "rotate-[-90deg]",
-        rotateHover: "rotate-[90deg]"
+        rotateHover: "rotate-[90deg]",
+        bodyMaterial: "Adler",
+        fingerboardMaterial: "Rosewood",
+        detailImages: [
+          "./images/fender/APS_aubergine_body1.png",
+          "./images/fender/APS_aubergine_body2.png",
+          "./images/fender/APS_aubergine_headstock_front.png",
+          "./images/fender/APS_aubergine_headstock_back.png",
+        ],
       },
       {
         color: "Sea-foam-green",
@@ -36,7 +79,15 @@ window.products = [
         imgMain: "./images/fender/APS_green_front.png",
         imgHover: "./images/fender/APS_green_back.png",
         rotateMain: "rotate-[-90deg]",
-        rotateHover: "rotate-[90deg]"
+        rotateHover: "rotate-[90deg]",
+        bodyMaterial: "Adler",
+        fingerboardMaterial: "Maple",
+        detailImages: [
+          "./images/fender/APS_green_body1.png",
+          "./images/fender/APS_green_body2.png",
+          "./images/fender/APS_green_headstock_front.png",
+          "./images/fender/APS_green_headstock_back.png",
+        ],
       },
     ]
   },

@@ -1,4 +1,65 @@
-hallo
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guitar Details - ToneScope</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/styles.css"/>
+  <link rel="icon" href="./images/favicon.png" type="image/png"/>
+  <style>
+    .collapsible { cursor: pointer; }
+    .content-collapsible { display: none; overflow: hidden; }
+    .active + .content-collapsible { display: block; }
+    .color-dot {
+      width: 32px; height: 32px; border-radius: 50%; border: 2px solid #ccc; display: inline-block; margin-right: 8px; cursor: pointer;
+      vertical-align: middle;
+    }
+    .color-dot.selected { border: 2px solid #e53e3e; }
+    .thumbnail.selected { border: 2px solid #e53e3e; }
+  </style>
+</head>
 
-<script src="./js/products.js"></script>
-<script src="./js/main.js"></script>
+<!-- Hearder -->
+    <header id="header" class="flex justify-between items-center px-7 mt-7 transition-all duration-300" >
+    <img 
+    src="./images/logo.png" 
+    alt="ToneScope" 
+    width="120" 
+    height="24"
+    /> 
+
+  <!-- Searchbar -->
+    <div class="flex-1 px-4">
+      <div class="relative max-w-xl mx-auto">
+        <input
+          type="text"
+          placeholder="What can we help you find?"
+          class="w-full pl-12 pr-4 py-3 rounded-full border border-gray-300 bg-gray-100 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-400"/>
+        <div class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div> 
+        
+<!-- Language Button --> 
+        <button>
+            <i class="fa-solid fa-globe"></i> <span class="font-bold">US</span>
+        </button>
+    </header>
+
+
+<body class="bg-white text-gray-900">
+  <div class="container mx-auto mt-10 px-4 max-w-3xl flex gap-4 items-center mb-6">
+    <div id="guitar-details">
+      <!-- Dynamischer Inhalt -->
+    </div>
+  </div>
+  <script src="./js/products.js"></script>
+  <script src="./js/specifics.js"></script>
+</body>
+</html>

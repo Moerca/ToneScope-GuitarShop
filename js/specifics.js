@@ -1,5 +1,15 @@
-const productId = "Stratocaster-HHS";
+// Find dynamic Product-ID form URL
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get("id");
 const product = window.products.find(p => p.id === productId);
+
+if (!product) {
+  document.getElementById('guitar-details').innerHTML = "<p>Produkt nicht gefunden.</p>";
+  throw new Error("Produkt nicht gefunden");
+}
+
+
+
 let selectedVariantIndex = 0;
 let mainImageIdx = 0;
 

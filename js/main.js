@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const grid = document.getElementById('productGrid');
     const products = window.filteredProducts || window.products;
     grid.innerHTML = '';
-    // Use your own card rendering logic (e.g. imported from product-hover.js)
+    
     products.forEach(product => {
       if (window.renderProductCard) {
         grid.appendChild(window.renderProductCard(product));

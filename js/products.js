@@ -267,15 +267,6 @@ window.products = [
     ],
     variants: [
       {
-        color: "Sunburst",
-        dotImg: "./images/colors/sunburst.png",
-        imgMain: "./images/taylor/Taylor-builders-edition_front.png",
-        imgHover: "./images/taylor/Taylor-builders-edition_back.png",
-        bodyMaterial: "Indian Rosewood",
-        bodyMaterialImg: "./images/colors/rosewood.png",
-        detailImages: ["TEST"]
-      },
-      {
         color: "Blacktop",
         dotImg: "./images/colors/dusk.png",
         imgMain: "./images/taylor/taylor814ce_blacktop_front.png",
@@ -309,9 +300,12 @@ window.products = [
   {
     id: "Taylor Studio SEB",
     name: "Taylor 314ce Studio SEB",
+    model: "00887766134572",
     oldPrice: "3,680.00$",
     price: "3,330.00$",
-    details: ["TEST"],
+    details: [
+      "For players seeking the rich, sophisticated acoustic tone and bold projection that comes with an all-solid-wood guitar, there may be no better value than the Taylor 314ce Studio. Now the lowest-priced gateway to the solid-wood experience in the Taylor line, this Grand Auditorium acoustic-electric combines back and sides of sapele with a torrefied spruce top, adding up to a punchy midrange response with a clear, woody character and an added dash of warmth and sweetness from our special roasting recipe. Inside, our V-Class bracing dials up more volume, longer sustain and improved harmony all the way up the neck. This model also features comfort-enhancing chamfered body edges and a slightly narrower fretboard of 1-11/16 inches, offering a hand-friendly feel that makes fretting a breeze regardless of your skill level. Finished off with a full-body gloss, nickel hardware and a faux tortoiseshell pickguard, the 314ce Studio includes ES2 electronics for faithful plugged-in tone and a structured gig bag."
+    ],
     moreDetails: [
       { title: "More Specifications", content: ["TEST"] },
       { title: "Warranty & Support", content: "TEST" }
@@ -322,22 +316,26 @@ window.products = [
         dotImg: "./images/colors/natural.png",
         imgMain: "./images/Taylor/Taylor-studio-natural_front.png",
         imgHover: "./images/Taylor/Taylor-studio-natural_back.png",
-        rotateMain: "TEST",
-        rotateHover: "TEST",
-        bodyMaterial: "TEST",
-        fingerboardMaterial: "TEST",
-        detailImages: ["TEST"]
+        bodyMaterial: "Torrefied Spruce",
+        bodyMaterialImg: "./images/colors/spruce.jpg",
+        detailImages: [
+          "./images/Taylor/Taylor-studio-natural_strings.jpg",
+          "./images/Taylor/Taylor-studio-natural_headstock.jpg",
+          "./images/Taylor/Taylor-studio-natural_full.jpg"
+        ]
       },
       {
         color: "SEB",
         dotImg: "./images/colors/SEB.png",
         imgMain: "./images/Taylor/Taylor-studio-seb_front.png",
         imgHover: "./images/Taylor/Taylor-studio-seb_back.png",
-        rotateMain: "TEST",
-        rotateHover: "TEST",
-        bodyMaterial: "TEST",
-        fingerboardMaterial: "TEST",
-        detailImages: ["TEST"]
+        bodyMaterial: "Sapele",
+        bodyMaterialImg: "./images/colors/SEB.png",
+        detailImages: [
+          "./images/Taylor/Taylor-studio-seb_strings.jpg",
+          "./images/Taylor/Taylor-studio-seb_headstock.jpg",
+          "./images/Taylor/Taylor-studio-seb_full.jpg"
+        ]
       }
     ]
   },
@@ -347,7 +345,11 @@ window.products = [
     name: "Martin D-28 | Standard Series",
     oldPrice: "4,695.99$",
     price: "4,214.00$",
-    details: ["TEST"],
+    details: [
+      "The Martin D-28 is widely regarded as the most iconic acoustic guitar in the world, trusted by generations of players and played by countless legends across genres. Its Dreadnought body size and scalloped bracing delivers the bold, projective tone with strong bass, clear trebles, and rich overtones that has defined acoustic music for nearly a century. Handcrafted with a solid spruce top and solid East Indian rosewood back and sides, the D-28 produces a resonant voice that’s beautifully balanced for all playing styles. The satin neck, featuring a Golden Era (GE) Modified Low Oval profile, high-performance taper, and 25.4\" scale length, ensures smooth, effortless playability. With antique white binding, an ebony fingerboard with mother of pearl dot inlays, an ebony bridge with bone pins, and nickel open gear tuners, the D-28 blends timeless craftsmanship with modern playability. Available in a variety of gloss and satin options, the D-28 is the guitar you can trust to unleash the artist within.",
+    
+      "Martin’s refreshed Standard Series for 2025 enhances tone, comfort, and style. Sitka spruce GE top bracing, as featured on the Modern Deluxe Series, delivers vintage-inspired tone and sustain, while updates like a reimagined neck profile, thinner fingerboard, and refined bridge and heel improve playability and aesthetics. Each guitar includes a hardshell case."
+    ],
     moreDetails: [
       { title: "More Specifications", content: ["TEST"] },
       { title: "Warranty & Support", content: "TEST" }
@@ -358,11 +360,12 @@ window.products = [
         dotImg: "./images/colors/bright.png",
         imgMain: "./images/Martin/Martin_front.webp",
         imgHover: "./images/Martin/Martin_back.webp",
-        rotateMain: "TEST",
-        rotateHover: "TEST",
-        bodyMaterial: "TEST",
-        fingerboardMaterial: "TEST",
-        detailImages: ["TEST"]
+        bodyMaterial: "Spruce",
+        bodyMaterialImg: "./images/colors/spruce.jpg",
+        detailImages: [
+          "./images/Martin/Martin_strings.webp",
+          "./images/Martin/Martin_headstock.webp",
+        ]
       }
     ]
   },
@@ -370,9 +373,13 @@ window.products = [
   {
     id: "1957 Gibson Country",
     name: "1957 Gibson Country Western",
-    oldPrice: "5,080.00$",
-    price: "4,899.00$",
-    details: ["TEST"],
+    model: "U9746 16",
+    oldPrice: "9,999.00$",
+    price: "7,899.00$",
+    details: [
+      "Upon its debut in the mid-1950s, the Gibson Country Western brought a touch of elegance to the flat-top acoustic lineup with its natural finish and refined appointments. This round-shouldered 1957 Country Western, built before the shift to a square-shoulder design in the 60s, is an outstanding example of Gibson’s natural-finished dreadnought from the Golden Era of acoustic production. This guitar is in very clean condition with light nicks, dings, and checking throughout, and it has a great neck angle with a big, chunky feel.",
+      "The binding has been reglued at the pickguard, and the bridge was most likely reglued at some point. The original tuners remain with the guitar but have shrunken and become brittle; a set of aged Kluson® Deluxe single-line white button tuners is currently installed. The guitar ships with a Lifton® Historic brown and pink hardshell case."
+    ],
     moreDetails: [
       { title: "More Specifications", content: ["TEST"] },
       { title: "Warranty & Support", content: "TEST" }
@@ -380,14 +387,17 @@ window.products = [
     variants: [
       {
         color: "Red-Ironbark",
-        dotImg: "./images/colors/natural.png",
+        dotImg: "./images/colors/redironbark.jpg",
         imgMain: "./images/Gibson/Gibson_front.png",
         imgHover: "./images/Gibson/Gibson_back.png",
-        rotateMain: "TEST",
-        rotateHover: "TEST",
-        bodyMaterial: "TEST",
-        fingerboardMaterial: "TEST",
-        detailImages: ["TEST"]
+        bodyMaterial: "Mahogany",
+        bodyMaterialImg: "./images/colors/mahogany.jpg",
+        detailImages: [
+          "./images/Gibson/Gibson_body1.png",
+          "./images/Gibson/Gibson_body2.png",
+          "./images/Gibson/Gibson_headstock.png",
+          "./images/Gibson/Gibson_strings.png"
+        ]
       }
     ]
   },
@@ -395,24 +405,37 @@ window.products = [
   {
     id: "Jim Dandy",
     name: "Limited Edition Jim Dandy™ Parlor Solid",
+    model: "2711002036",
     oldPrice: "300.00$",
     price: "270.00$",
-    details: ["TEST"],
+    details: [
+      "Well suited for everything from bluesy porch pickin’ to speakeasy swingin’, the Gretsch Limited Edition Jim Dandy™ Parlor Solid Top is a ramblin’ companion for newbies and old-timers alike.",
+
+      "Inspired by the historic \“Rex\” line of instruments offered by mail-order catalog in the 1930s, ‘40s and ’50s, Jim Dandy™ models embody the charm and spirit of those early Gretsch® flat-top guitars with the superior playability and best-in-class tone that their namesake suggests.",
+
+      "Featuring a petite and portable parlor body shape, a solid spruce top, and a short 24“ scale length, the Limited Edition Jim Dandy™ Parlor Solid Top punches above its weight with a distinct tonal clarity and throaty midrange for which parlor guitars are so beloved.",
+
+      "The X-braced body is crafted with a solid spruce top and laminated sapele back and sides for a crisp, clear tone with plenty of warmth and presence. The easy playing “C”-shaped neck presents an inviting feel for hours of old-timey inspiration. Period-correct details such as a vintage-style pinned bridge, “G”-graphic pickguard, painted pinstripe purfling, 3-on-a-plate open-gear tuning machines and oversized dot fingerboard inlays combine for a nostalgic personality destined for any barnburner or jamboree."
+    ],
     moreDetails: [
       { title: "More Specifications", content: ["TEST"] },
       { title: "Warranty & Support", content: "TEST" }
     ],
     variants: [
       {
-        color: "Sunburst",
+        color: "Heritage Burst",
         dotImg: "./images/colors/sunburst.png",
         imgMain: "./images/Gretsch/Gretsch_front.png",
         imgHover: "./images/Gretsch/Gretsch_back.png",
-        rotateMain: "rotate-[-90deg]",
-        rotateHover: "rotate-[90deg]",
-        bodyMaterial: "TEST",
-        fingerboardMaterial: "TEST",
-        detailImages: ["TEST"]
+        bodyMaterial: "Solid Spruce",
+        bodyMaterialImg: "./images/colors/spruce.jpg",
+        fingerboardMaterial: "Walnut",
+        fingerboardMaterialImg: "./images/colors/rosewood.png",
+        detailImages: [
+          "./images/Gretsch/Gretsch_body1.png",
+          "./images/Gretsch/Gretsch_body2.png",
+          "./images/Gretsch/Gretsch_headstock.png",
+        ]
       }
     ]
   }
